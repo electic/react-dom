@@ -1,48 +1,50 @@
 {
-  "private": true,
-  "name": "@hot-loader/react-dom",
-  "version": "0.0.0",
-  "description": "The Hot version of React-DOM",
-  "main": "index.js",
-  "scripts": {
-    "clean": "rm -Rf target",
-    "prepare": "cp ./README.md ./source/README.md",
-    "patch": "node auto-publish/build.js",
-    "build": "run-s clean prepare patch",
-    "yarn-deduplicate": "yarn-deduplicate yarn.lock -s fewer",
-    "test": "jest"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/hot-loader/react-dom.git"
-  },
-  "keywords": [
-    "HMR",
-    "react",
-    "hot-loader"
-  ],
-  "author": "theKashey <thekashey@gmail.com>",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/hot-loader/react-dom/issues"
-  },
-  "homepage": "https://github.com/hot-loader/react-dom#readme",
-  "devDependencies": {
-    "@types/fs-extra": "^8.0.0",
-    "@types/jest": "^24.0.15",
-    "@types/node": "^10",
-    "@types/semver": "^6.0.1",
-    "jest": "^24.8.0",
-    "npm-run-all": "^4.1.5",
-    "prettier": "^1.18.2",
-    "typescript": "^3.5.2",
-    "yarn-deduplicate": "^1.1.1"
-  },
-  "dependencies": {
-    "fs-extra": "^8.1.0",
-    "loose-envify": "^1.1.0",
-    "object-assign": "^4.1.1",
-    "prop-types": "^15.6.2",
-    "semver": "^6.2.0"
-  }
+ "name": "@test-org-bnaya-2/react-dom",
+ "version": "17.0.2+4.13.0",
+ "description": "The Hot version of React-DOM",
+ "main": "index.js",
+ "repository": {
+  "type": "git",
+  "url": "git+https://github.com/hot-loader/react-dom.git"
+ },
+ "keywords": [
+  "HMR",
+  "react",
+  "hot-loader"
+ ],
+ "license": "MIT",
+ "bugs": {
+  "url": "https://github.com/hot-loader/react-dom/issues"
+ },
+ "homepage": "https://github.com/hot-loader/react-dom#readme",
+ "dependencies": {
+  "loose-envify": "^1.1.0",
+  "object-assign": "^4.1.1",
+  "scheduler": "^0.20.2"
+ },
+ "peerDependencies": {
+  "react": "17.0.2"
+ },
+ "files": [
+  "LICENSE",
+  "README.md",
+  "build-info.json",
+  "index.js",
+  "profiling.js",
+  "server.js",
+  "server.browser.js",
+  "server.node.js",
+  "test-utils.js",
+  "cjs/",
+  "umd/"
+ ],
+ "browser": {
+  "./server.js": "./server.browser.js",
+  "./unstable-fizz.js": "./unstable-fizz.browser.js"
+ },
+ "browserify": {
+  "transform": [
+   "loose-envify"
+  ]
+ }
 }
